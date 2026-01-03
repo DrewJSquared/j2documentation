@@ -135,7 +135,7 @@ In this section, you'll learn how to modify these lines so that you can create s
 
 ### 3.1 Show Type
 
-| Website Label | Code Enum     |
+| Website Label | Code Value    |
 | ------------- | ------------- |
 | Static        | `AE3C_STATIC` |
 | All           | `AE3C_ALL`    |
@@ -157,6 +157,8 @@ Engine.setShowType(AE3C_STATIC);
 ```
 
 Note how everything else is the same, except for the text within parenthesis. To change other parameters like speed, you'll also just change the value within parenthesis. Keep reading to see those additional parameters.
+
+⚠️ These values (like `AE3C_ALL`) must be typed **exactly as shown**, including capitalization and underscores.
 
 ---
 
@@ -194,7 +196,7 @@ Engine.setSize(50);
 
 ### 3.4 Direction
 
-| Website Icon / Meaning | Code Enum      |
+| Website Icon / Meaning | Code Value     |
 | ---------------------- | -------------- |
 | Left → Right           | `AE3C_LR`      |
 | Right → Left           | `AE3C_RL`      |
@@ -223,7 +225,7 @@ Engine.setSplits(7);
 
 ### 3.6 Transition Type
 
-| Website Icon | Code Enum       |
+| Website Icon | Code Value      |
 | ------------ | --------------- |
 | Both         | `AE3C_BOTH`     |
 | Leading      | `AE3C_LEADING`  |
@@ -333,7 +335,9 @@ This must match the **physical number of fixtures or pixels**.
 int TOTAL_PIXEL_COUNT = 70;
 ```
 
-Change this if the install has more or fewer fixtures. *As a general rule, better to have this number be too high than too low.* I'm totally fine with this number being roughly accurate and higher than the number of pixels on the strip. It doesn't have to be exact.
+Change this if the install has more or fewer fixtures. As a general rule, this value can safely be **slightly higher** than the actual number of pixels, but should be in the correct ballpark (within 10-20%).
+
+Do not set this to an arbitrarily large number.
 
 
 ---
